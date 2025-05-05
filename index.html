@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Razor Sharp Barber</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="./images/logo.png" alt="barbershop-logo">
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="home" style="background-image: url('./images/barbershop1.jpg');">
+  <h2>About Us</h2>
+  <p class="description">
+    At Razor Sharp Barber, we specialize in providing top-notch haircuts, beard trims, and grooming services in a relaxed and welcoming environment. Our skilled barbers are committed to delivering quality cuts that leave you looking and feeling your best. 
+    Whether you're here for a quick trim or a fresh new style, we take pride in offering excellent service and a great experience.
+  
+    Visit us today and let us take care of your grooming needs!
+  </p>
+</div>
+
+<div id="services" class="section services">
+  <h2>Our Services</h2>
+
+  <div class="service-category">
+    <h3>Haircuts & Grooming</h3>
+    <ul>
+    <li>Normal Hair Cut - 15 Euros <button class="book-btn" data-service="Normal Hair Cut">Book Now</button></li>
+    <li>Skin Fade - 17 Euros <button class="book-btn" data-service="Skin Fade">Book Now</button></li>
+    <li>Beard Trim and Shape Up - 20 Euros <button class="book-btn" data-service="Beard Trim and Shape Up">Book Now</button></li>
+    <li>Kids Haircut Under 12 - 10 Euros <button class="book-btn" data-service="Kids Haircut Under 12">Book Now</button></li>
+    <li>Kids Skin Fade - 11 Euros <button class="book-btn" data-service="Kids Skin Fade">Book Now</button></li>
+    <li>Razor Fade - 18 Euros <button class="book-btn" data-service="Razor Fade - 18 Euros">Book Now</button></li>
+    <li>Design - 14 Euros <button class="book-btn" data-service="Design">Book Now</button></li>
+    <li>Shampoo - 9 Euros <button class="book-btn" data-service="Shampoo">Book Now</button></li>
+    </ul>
+    </div>
+    
+    <div class="service-category">
+    <h3>Facials & Treatments</h3>
+    <ul>
+    <li>Mains Facial - 25 Euros <button class="book-btn" data-service="Mains Facial">Book Now</button></li>
+    <li>Beard Trim and Facial - 20 Euros <button class="book-btn" data-service="Beard Trim and Facial">Book Now</button></li>
+    <li>Eyebrow Trim - 13 Euros <button class="book-btn" data-service="Eyebrow Trim">Book Now</button></li>
+    <li>Eyebrow Waxing - 17 Euros <button class="book-btn" data-service="Eyebrow Waxing ">Book Now</button></li>
+    <li>Hot Towel Treatment - 28 Euros <button class="book-btn" data-service="Hot Towel Treatment">Book Now</button></li>
+    <li>Nose Wax - 17 Euros <button class="book-btn" data-service="Nose Wax">Book Now</button></li>
+    </ul>
+    </div>
+    
+    <div class="service-category">
+    <h3>Coloring</h3>
+    <ul>
+    <li>Full Highlight - 30 Euros <button class="book-btn" data-service="Full Highlight">Book Now</button></li>
+    <li>Partial Highlight - 25 Euros <button class="book-btn" data-service="Partial Highlight">Book Now</button></li>
+    <li>All Over Color - 38 Euros <button class="book-btn" data-service="All Over Color">Book Now</button></li>
+    <li>Root Touch - 27 Euros <button class="book-btn" data-service="Root Touch">Book Now</button></li>
+    <li>Color Correction - 45 Euros <button class="book-btn" data-service="Color Correction">Book Now</button></li>
+    </ul>
+    </div>
+    </div>
+
+</div>
+
+<div id="gallery" class="section gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-container">
+    <img src="./images/barber1.png" alt="Service 1" />
+    <img src="./images/barber2.png" alt="Service 2">
+    <img src="./images/barber3.png" alt="Service 3">
+    <img src="./images/barber12.png" alt="Service 4">
+    <img src="./images/barber6.png" alt="Service 4">
+    <img src="./images/barber7.png" alt="Service 4">
+    <img src="./images/barber8.png" alt="Service 4">
+    <img src="./images/barber10.png" alt="Service 4">
+    <img src="./images/barber11.png" alt="Service 4">
+  </div>
+</div>
+
+<div id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p>Email: <a href="mailto:info@razorsharpbarber.com">info@razorsharpbarber.com</a></p>
+  <p>Phone: <a href="tel:+35315595940">+353 1 559 5940</a></p>
+  <p>
+    <a href="https://www.google.ie/maps/place/Blanchardstown+Centre/..." target="_blank">Find Us on the Map</a>
+  </p>
+
+  <!-- Contact Form -->
+
+  <div class="contact-form">
+    <h3>Send Us a Message</h3>
+    <form id="contactForm" action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="successMessage" style="display: none;">Your message was sent successfully!</div>
+  </div>
+</div>
+
+<!-- Success Message Box -->
+
+<div id="successMessage" style="display: none; margin-top: 20px; padding: 20px; background-color: gold; color: black; border-radius: 10px;text-align: center;
+width: auto; max-width: 300px; margin: 20px auto;">
+Your message was sent successfully!
+</div>
+</div>
+</div>
+
+
+<!-- Chatbot Elements - Icon-->
+<div id="chatbot-icon" class="chatbot-icon">
+  <img src="./images/chatbot-icon.png" alt="Chatbot Icon" style="width: 40px; height: 40px;" />
+</div>
+<!-- Chatbot Conteiner-->
+
+<div id="chatbot-container" class="chatbot-container hidden">
+  <div class="chatbot">
+    <div class="chatbot-header">
+      <span class="chatbot-title">AI Assistant</span>
+      <button id="minimize-button" class="minimize-btn">–</button>
+    </div>
+    <div id="chatbox" class="chatbox"></div>
+    <div id="input-section" class="chatbot-input">
+      <input type="text" id="userInput" placeholder="Type your message..." />
+      <button id="sendBtn">Send</button>
+    </div>
+    <div id="quickActions" class="quick-actions">
+      <button class="quick-action-btn" id="view-services">View Services</button>
+      <button class="quick-action-btn" id="check-prices">Check Prices</button>
+      <button class="quick-action-btn" id="book-appointment">Book Appointment</button>
+    </div>
+    <button id="reset-chat-btn">Start Over</button>
+  </div>
+</div>
+
+<!--Footer Section-->
+
+<footer>
+  <div class="footer-container">
+    <div class="social-media">
+      <p>Follow us on Instagram:</p>
+      <a href="https://www.instagram.com/razorsharp__barber" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon" />
+        @razorsharp_barber
+      </a>
+    </div>
+
+<!--Opening hours-->
+
+    <div class="hours">
+      <p><strong>Opening Hours:</strong></p>
+      <p>Mon - Sat: 10:00 AM - 18:00 PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+
+<!--Copyright Information-->
+    <div class="copyright">
+      <p>&copy; 2025 Razor Sharp Barber. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!--Scrolling up button -->
+
+<button id="scrollToTopBtn">↑ Go to Top</button>
+
+<!-- Link to external JS -->
+ 
+<script src="script.js"></script>
+</body>
+</html>

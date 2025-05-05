@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booksy Booking</title>
+  <link rel="stylesheet" href="stylebarberbooking.css"> 
+</head>
+<body>
+
+  <h1>Booksy Booking</h1>
+
+  <form id="bookingForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br><br>
+
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time" required><br><br>
+
+    <label for="service">Service:</label>
+    <select id="service" name="service" required>
+      <option value="Normal Hair Cut">Normal Hair Cut</option>
+      <option value="Skin Fade">Skin Fade</option>
+      <option value="Beard Trim and Shape Up">Beard Trim and Shape Up</option>
+      <option value="Kids Haircut Under 12">Kids Haircut Under 12</option>
+      <option value="Kids Skin Fade">Kids Skin Fade</option>
+      <option value="Razor Fade">Razor Fade</option>
+      <option value="Design">Design</option>
+      <option value="Shampoo">Shampoo</option>
+      <option value="Mains Facial">Mains Facial</option>
+      <option value="Beard Trim and Facial">Beard Trim and Facial</option>
+      <option value="Eyebrow Trim">Eyebrow Trim</option>
+      <option value="Eyebrow Waxing">Eyebrow Waxing</option>
+      <option value="Hot Towel Treatment">Hot Towel Treatment</option>
+      <option value="Nose Wax">Nose Wax</option>
+      <option value="Full Highlight">Full Highlight</option>
+      <option value="Partial Highlight">Partial Highlight</option>
+      <option value="All Over Color">All Over Color</option>
+      <option value="Root Touch">Root Touch</option>
+      <option value="Color Correction">Color Correction</option>
+    </select><br><br>
+
+    <button type="submit">Book Now</button>
+  </form>
+
+  <div id="confirmationMessage" style="display: none; margin: 30px auto; padding: 15px; background: black; border: 1px solid gold; border-radius: 10px; max-width: 450px; text-align: center;">
+    <!-- Confirmation message will appear here -->
+</div>
+
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      // Get form values
+      const name = document.getElementById('name').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+      const service = document.getElementById('service').value;
+
+      // Create confirmation message
+      const confirmationMessage = `
+        <h2>Booking Confirmed</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Date:</strong> ${date}</p>
+        <p><strong>Time:</strong> ${time}</p>
+        <p><strong>Service:</strong> ${service}</p>
+      `;
+
+      // Show confirmation message
+      const confirmationDiv = document.getElementById('confirmationMessage');
+      confirmationDiv.innerHTML = confirmationMessage;
+      confirmationDiv.style.display = 'block';
+    });
+  </script>
+
+<!--Script to change the time-->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const timeInput = document.getElementById('time');
+    
+    // Function to generate time options from 10:00 to 18:00 (10 AM to 6 PM)
+    function generateTimeOptions() {
+      const startHour = 10; 
+      const endHour = 18; 
+      let options = [];
+      
+      // Generate time options with 30-minute intervals from 10 AM to 6 PM
+      for (let hour = startHour; hour <= endHour; hour++) {
+        const formattedHour = hour < 10 ? `0${hour}` : hour; 
+        options.push(`${formattedHour}:00`);
+        options.push(`${formattedHour}:30`);
+      }
+      
+      // Set the available options in the time input field
+      timeInput.setAttribute('list', 'time-options');
+      
+      // Create a datalist for the time options
+      let dataList = document.createElement('datalist');
+      dataList.id = 'time-options';
+      
+      options.forEach(function(option) {
+        let optionElement = document.createElement('option');
+        optionElement.value = option;
+        dataList.appendChild(optionElement);
+      });
+      
+      // Append the datalist to the body or the form
+      document.body.appendChild(dataList);
+    }
+    
+    generateTimeOptions();
+  });
+</script>
+
+<!--Script to change the date on the calendar-->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const dateInput = document.getElementById('date');
+
+    // Function to disable weekends (Saturday and Sunday)
+    function disableWeekends() {
+      const today = new Date(); 
+      const currentYear = today.getFullYear();
+      const currentMonth = today.getMonth();
+      const currentDate = today.getDate();
+      
+      // Set the minimum date to today
+      const minDate = today.toISOString().split('T')[0]; 
+      dateInput.setAttribute('min', minDate);
+      
+      // Disable weekends (Saturday and Sunday) by checking the day of the week
+      dateInput.addEventListener('input', function() {
+        const selectedDate = new Date(dateInput.value);
+        const dayOfWeek = selectedDate.getDay(); 
+        
+        if (dayOfWeek === 0 || dayOfWeek === 5) {
+          alert("Please select a weekday (Monday to Saturday).");
+          dateInput.value = ''; 
+        }
+      });
+    }
+
+    disableWeekends(); // Call the function on page load
+  });
+</script>
+
+</body>
+</html>

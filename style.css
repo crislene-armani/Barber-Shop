@@ -1,0 +1,753 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: gold;
+    }
+
+    header {
+    background-color: black; 
+    color: #fff; 
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 20px; 
+    height: 70px; 
+    font-size: 20px;
+            
+    }
+        
+header img {
+    width: 230px; 
+    height: auto; 
+            
+    }
+        
+
+nav a {
+    color: gold;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    }
+
+nav a:hover {
+    text-decoration: underline;
+    }
+
+.home {
+    background-image: url('./images/barbershop1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6); 
+    background-blend-mode: overlay;
+    color: gold;
+    }
+        
+.home h2 {
+    font-size: 2.5rem; 
+    text-shadow: 2px 2px 5px black; 
+    position: absolute;
+    top: 250px;
+    font-weight: bold;
+    }
+
+.home h3 {
+    font-size: 2rem; 
+    font-weight: normal;
+    z-index: 2; 
+    margin-top: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+    }
+
+.home .description {
+    font-size: 1.2rem; 
+    color:gold; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+    max-width: 700px;
+    margin: 0 auto; 
+    line-height: 1.8; 
+    padding: 0 20px; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    }
+
+
+
+
+/* Overall container styling */
+.services {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #000; 
+    border: 1px solid gold;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+}
+
+/* Main heading */
+.services h2 {
+    text-align: center;
+    color: gold; 
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Service category styling */
+.service-category {
+    margin-bottom: 30px;
+}
+
+.service-category h3 {
+    font-size: 20px;
+    color: gold; 
+    margin-bottom: 10px;
+    border-bottom: 2px solid gold; 
+    padding-bottom: 5px;
+}
+
+/* List styling */
+.service-category ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-category li {
+    font-size: 16px;
+    color: gold; 
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed gold; 
+    padding-bottom: 8px;
+}
+
+/* Button styling */
+.book-btn {
+    background-color: gold;
+    color: black; 
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-btn:hover {
+    background-color: #d4af37; 
+    transform: scale(1.05); 
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .service-category li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .book-btn {
+        margin-top: 5px;
+        width: 100%;
+    }
+}
+
+
+.section.gallery {
+    padding: 50px 20px;
+    background-color: #000; 
+    color: gold; 
+    text-align: center;
+}
+
+/* Title Styling */
+.section.gallery h2 {
+    font-size: 2.0rem; 
+    color: gold; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    margin-bottom: 20px; 
+    border-bottom: 2px solid gold; 
+    display: inline-block; 
+    padding-bottom: 10px; 
+}
+
+/* Gallery Container Styling */
+.gallery-container {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+/* Individual Images */
+.gallery-container img {
+    width: 200px; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* Hover Effect */
+.gallery-container img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7); 
+}
+       
+
+
+/* General Contact Section Styling */
+.section#contact {
+    padding: 50px 20px;
+    background-color: #000; 
+    color: gold; 
+    text-align: center;
+}
+
+.section#contact h2 {
+    font-size: 2.0rem;
+    color: gold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid gold;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Contact Information Styling */
+.section#contact p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.section#contact a {
+    color: gold;
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+.section#contact a:hover {
+    text-decoration: underline; 
+}
+
+.contact-form {
+    max-width: 500px; 
+    margin: 0 auto; 
+    margin-top: 30px;
+    padding: 10px;
+    border: 1px solid gold;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #000; 
+    box-shadow: 0 2px 5px rgba(255, 215, 0, 0.3);
+
+}
+
+.contact-form h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: gold; 
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid gold; 
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #222; 
+    color: gold; 
+}
+.contact-form form input:focus,
+.contact-form form textarea:focus {
+    outline: none;
+    border-color: #ffd700; 
+    box-shadow: 0 0 3px rgba(255, 215, 0, 0.6); 
+}
+
+.contact-form form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    width: 40%;
+    padding: 8px;
+    font-size: 14px;
+    color: #000; 
+    background-color: gold; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #d4af37; 
+}
+
+/*Scrolling up button */
+
+#scrollToTopBtn {
+    display: none; 
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color:gold;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #e6c200; 
+}
+
+
+/* Chatbot container */
+
+
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Chatbot box */
+.chatbot {
+    background: black; 
+    border-radius: 15px;
+    width: 320px;
+    max-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    border: 2px solid gold; 
+    overflow: hidden;
+}
+
+/* Chatbox area */
+.chatbox {
+    overflow-y: auto;
+    height: 300px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #1a1a1a; 
+    border-radius: 10px;
+    color: gold; 
+    scrollbar-width: thin;
+    scrollbar-color: gold black;
+}
+
+/* Scrollbar customization */
+.chatbox::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+    background: gold; 
+    border-radius: 5px;
+}
+
+.chatbox::-webkit-scrollbar-track {
+    background: black;
+}
+
+/* Messages */
+.bot-message, .user-message {
+    margin: 8px 5px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Bot message style */
+.bot-message {
+    background-color: gold;
+    color: black; 
+    border: 1px solid gold;
+    align-self: flex-start;
+    max-width: 80%;
+    font-weight: bold;
+}
+
+/* User message style */
+.user-message {
+    background-color: black; 
+    color: gold;
+    border: 1px solid gold;
+    align-self: flex-end;
+    max-width: 80%;
+    font-weight: normal;
+}
+
+/* Input and button container */
+.chatbot-input {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+/* Input field style */
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid gold;
+    background-color: black; 
+    color: gold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]::placeholder {
+    color: #999; 
+    font-style: italic;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    background: #1a1a1a; 
+    border-color: #ffd700;
+}
+
+/* Button style */
+button {
+    padding: 12px 25px;
+    background: gold; 
+    color: black;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4); 
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #ffd700;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px 3px rgba(255, 215, 0, 0.8); 
+}
+
+/* Input and button focus for accessibility */
+input[type="text"]:focus, button:focus {
+    outline: none;
+}
+
+/* Chatbot Header */
+.chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: gold;
+    color: black;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Minimize Button */
+.minimize-btn {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.minimize-btn:hover {
+    transform: scale(1.2);
+}
+
+.minimize-btn:focus {
+    outline: none;
+}
+
+/* Hidden state */
+.hidden {
+    display: none;
+}
+
+
+/* Mobile responsiveness */
+@media screen and (max-width: 480px) {
+    .chatbot {
+        width: 90%; 
+    }
+
+    input[type="text"], button {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
+
+/* Chatbot Icon */
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: gold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.chatbot-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Chatbot Container (Initially Hidden) */
+.chatbot-container.hidden {
+    display: none;
+}
+
+/* Chatbot Styles (already defined in your original code) */
+.chatbot-container {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chatbot {
+    background-color: black;
+    border-radius: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid gold;
+}
+
+.chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gold;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.chatbot-title {
+    color: black;
+    font-weight: bold;
+}
+
+.minimize-btn {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.chatbox {
+    overflow-y: auto;
+    height: 250px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    color: gold;
+}
+
+.chatbot-input {
+    display: flex;
+    align-items: center;
+}
+
+.chatbot-input input {
+    padding: 10px;
+    flex: 1;
+    border: 1px solid gold;
+    border-radius: 5px;
+    background-color: #333;
+    color: gold;
+    margin-right: 10px;
+}
+
+.chatbot-input button {
+    padding: 10px 20px;
+    background-color: gold;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*chatbot quick actions*/
+
+.quick-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.quick-action-btn {
+    background-color: gold;
+    color: black;
+    border: none;
+    padding: 10px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+
+    
+}
+
+.quick-action-btn:hover {
+    background-color: gold;
+}
+
+
+/* Start Over Button */
+
+
+#startOverButton {
+    background-color: gold; 
+    color: black;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    margin-top: 20px; 
+}
+
+/* Hover effect */
+#startOverButton:hover {
+    background-color: gold; 
+    transform: scale(1.05); 
+}
+
+/* Focused state */
+#startOverButton:focus {
+    outline: none; 
+    box-shadow: 0 0 5px gold; 
+}
+
+
+
+/* Footer */
+
+footer {
+     background-color: #000; 
+     color: gold;
+     text-align: center;
+     padding: 30px 20px;
+     font-size: 1rem;
+     border-top: 2px solid gold;
+    }
+            
+ .footer-container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    }
+            
+footer p {
+    margin: 5px 0;
+    }
+            
+/* Social Media Section */
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+            
+.social-media a {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    }
+            
+.social-icon {
+    width: 25px;
+     height: 25px;
+    }
+    
+/* Opening Hours Section */
+.hours p {
+    font-size: 1rem;
+    }
+            
+/* Copyright Section */
+.copyright p {
+    font-size: 1rem;
+    margin-top: 10px;
+    }
+            
+/* Responsive Design for smaller screens */
+
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.9rem;
+        }
+    .social-icon {
+        width: 20px;
+        height: 20px;
+        }
+        }
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .section#contact {
+        padding: 30px 10px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem; 
+    }
+}
